@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<x-breadcrumbs/>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col">

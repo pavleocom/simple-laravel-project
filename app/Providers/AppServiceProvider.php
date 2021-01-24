@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\View\Components\FormErrors;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use App\View\Components\Breadcrumbs;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::component('components.form-errors', FormErrors::class);
+        Blade::component('form-errors', FormErrors::class);
+        Blade::component('breadcrumbs', Breadcrumbs::class);
     }
 }

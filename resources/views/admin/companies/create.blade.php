@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<x-breadcrumbs/>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
                 <div class="card-header">{{ __('Add New Company') }}</div>
-
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

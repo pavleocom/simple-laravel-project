@@ -1,5 +1,7 @@
 <?php
 
+use Tabuna\Breadcrumbs\Trail;
+use Tabuna\Breadcrumbs\Breadcrumbs;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect()->route('companies.index');
-});
+})->name('home');
 
 Auth::routes(['register' => false]);
 Route::resource('companies', App\Http\Controllers\CompanyController::class);
