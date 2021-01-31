@@ -2,10 +2,14 @@
 
 namespace App\Providers;
 
+use App\Models\Company;
+use App\Models\Employee;
+use App\Observers\CompanyObserver;
+use App\Observers\EmployeeObserver;
 use App\View\Components\FormErrors;
+use App\View\Components\Breadcrumbs;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use App\View\Components\Breadcrumbs;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,5 +32,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::component('form-errors', FormErrors::class);
         Blade::component('breadcrumbs', Breadcrumbs::class);
+
+        Employee::observe(EmployeeObserver::class);
+        Company::observe(CompanyObserver::class);
     }
 }

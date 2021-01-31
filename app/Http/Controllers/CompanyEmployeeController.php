@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreEmployee;
 use App\Models\Company;
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreEmployee;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EmployeeCreatedMarkdown;
 
 class CompanyEmployeeController extends Controller
 {
