@@ -18,7 +18,7 @@ class CompanyPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == 1;
     }
 
     /**
@@ -30,7 +30,7 @@ class CompanyPolicy
      */
     public function view(User $user, Company $company)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == 1;
     }
 
     /**
@@ -41,7 +41,7 @@ class CompanyPolicy
      */
     public function create(User $user)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == true;
     }
 
     /**
@@ -53,7 +53,7 @@ class CompanyPolicy
      */
     public function update(User $user, Company $company)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == true;
     }
 
     /**
@@ -65,7 +65,7 @@ class CompanyPolicy
      */
     public function delete(User $user, Company $company)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == true;
     }
 
     /**

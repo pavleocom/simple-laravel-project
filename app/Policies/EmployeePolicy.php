@@ -18,7 +18,7 @@ class EmployeePolicy
      */
     public function viewAny(User $user)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == true;
     }
 
     /**
@@ -30,7 +30,7 @@ class EmployeePolicy
      */
     public function view(User $user, Employee $employee)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == true;
     }
 
     /**
@@ -41,7 +41,7 @@ class EmployeePolicy
      */
     public function create(User $user)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == 1;
     }
 
     /**
@@ -53,7 +53,7 @@ class EmployeePolicy
      */
     public function update(User $user, Employee $employee)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == 1;
     }
 
     /**
@@ -65,7 +65,7 @@ class EmployeePolicy
      */
     public function delete(User $user, Employee $employee)
     {
-        return $user->is_admin === 1;
+        return $user->is_admin == 1;
     }
 
     /**

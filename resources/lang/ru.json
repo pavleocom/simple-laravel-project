@@ -1,5 +1,6 @@
 {
     "New employee was registered": "Зарегистрирован новый сотрудник",
     "View": "Посмотреть",
-    "New company was registered": "Зарегистрирована новая компания"
+    "New company was registered": "Зарегистрирована новая компания",
+    "The company was successfully created.": "Компания успешно создана."
 }

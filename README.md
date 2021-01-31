@@ -17,6 +17,7 @@ A simple website utilising core functionalities of the Laravel framework.
 -   Breadcrumbs
 -   Multi Language Support
 -   Email Sending Via Queues
+-   Tests
 
 ## Installation & Setup
 
@@ -24,6 +25,7 @@ A simple website utilising core functionalities of the Laravel framework.
 
 -   Clone the repository with  **git clone**
 -   Copy **.env.example**  file to  **.env**  and edit database and email credentials
+-   Edit **phpunit.xml** set DB_DATABASE to your test database
 -   Run **composer install**
 -   Run **npm install**
 -   Run **npm run development**

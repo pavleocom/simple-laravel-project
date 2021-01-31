@@ -113,6 +113,7 @@ class CompanyEmployeeController extends Controller
     public function destroy(Company $company, Employee $employee)
     {
         $employee->delete();
-        return redirect()->route('companies.show', ['company' => $company->id]);
+        return redirect(route('companies.show', ['company' => $company->id]))
+                    ->with('status', 'The employee was successfully deleted.');
     }
 }

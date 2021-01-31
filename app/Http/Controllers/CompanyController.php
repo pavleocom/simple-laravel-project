@@ -57,7 +57,7 @@ class CompanyController extends Controller
             $company->logo = $path;
             $company->save();
             return redirect()->route('companies.show', ['company' => $company->id])
-                    ->with('status', 'The company was successfully created.');
+                    ->with('status', __('The company was successfully created.'));
 
         } else {
 
